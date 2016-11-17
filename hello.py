@@ -1,12 +1,11 @@
 #!/usr/bin/python
 
-def wsgi_application(environ, start_response):
-    # бизнес-логика
+def app(environ, start_response):
     status = '200 OK'
     headers = [
         ('Content-Type', 'text/plain')
     ]
-    body =''
+    body = ''
     for line in environ["QUERY_STRING"].split("&"):
         body = body + line + '\n'
 
