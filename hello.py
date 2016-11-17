@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 def wsgi_application(environ, start_response):
     # бизнес-логика
     status = '200 OK'
